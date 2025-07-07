@@ -101,7 +101,7 @@ class _FormFinanceDialogState extends State<FormFinanceDialog> {
 
               accountProvider.addFinance(widget.finance.name, enteredAmount, widget.finance.category);
               transactionProvider.addTransaction(
-                finance: widget.finance,
+                finance: FinancesModel(name: widget.finance.name, amount: enteredAmount, category: widget.finance.category),
                 action: ActionType.suscrito,
               );
               Navigator.of(context).pop(); // Cerrar diálogo
